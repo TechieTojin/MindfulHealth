@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/de3c3a44-cfad-47c0-be0a-34a3b63d1b01)
+
 # 🚀 Mindful Health Hub
 A holistic health management platform powered by AI to revolutionize personalized healthcare experiences.
 
