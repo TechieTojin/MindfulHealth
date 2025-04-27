@@ -1,0 +1,268 @@
+/* Health Pages Shared Styling */
+
+:root {
+  --primary: #2D7DD2;
+  --primary-light: #45B7EE;
+  --primary-dark: #215F9E;
+  --secondary: #45A29E;
+  --accent: #FF6B6B;
+  --success: #4CAF50;
+  --warning: #FFC107;
+  --danger: #EF476F;
+  --card-bg: #1e293b;
+  --card-bg-alt: #0f172a;
+  --card-border: #334155;
+  --card-hover: #334155;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --app-bg: #0f172a;
+}
+
+/* Dark theme variables - can be toggled with a theme class */
+.dark-theme {
+  --primary: #3b82f6;
+  --primary-light: #60a5fa;
+  --primary-dark: #2563eb;
+  --secondary: #38bdf8;
+  --accent: #fb7185;
+  --success: #4ade80;
+  --warning: #facc15;
+  --danger: #f43f5e;
+  --card-bg: #1e293b;
+  --card-bg-alt: #0f172a;
+  --card-border: #334155;
+  --card-hover: #334155;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --app-bg: #0f172a;
+}
+
+/* Utility Classes */
+.text-gradient-primary {
+  background: linear-gradient(45deg, var(--primary), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(45deg, var(--primary), var(--primary-light));
+}
+
+.bg-card {
+  background-color: var(--card-bg);
+}
+
+.app-dark-bg {
+  background-color: var(--app-bg);
+  color: var(--text);
+}
+
+.bg-card-alt {
+  background-color: var(--card-bg-alt);
+}
+
+.border-card-border {
+  border-color: var(--card-border);
+}
+
+.bg-card-hover {
+  background-color: var(--card-hover);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+/* Animations */
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-in-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Component Styles */
+
+/* Cards */
+.health-card {
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  transition: all 0.3s ease;
+}
+
+.health-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(45deg, var(--primary), var(--primary-light));
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+/* Progress bars */
+.progress-container {
+  width: 100%;
+  height: 0.5rem;
+  background-color: var(--card-bg-alt);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 1rem;
+  transition: width 0.5s ease-in-out;
+}
+
+.progress-primary {
+  background: linear-gradient(45deg, var(--primary), var(--primary-light));
+}
+
+.progress-success {
+  background: linear-gradient(45deg, var(--success), #A0E57C);
+}
+
+.progress-warning {
+  background: linear-gradient(45deg, var(--warning), #FFDD4A);
+}
+
+.progress-danger {
+  background: linear-gradient(45deg, var(--danger), #FF9B9B);
+}
+
+/* Tags and badges */
+.health-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.tag-primary {
+  background-color: rgba(45, 125, 210, 0.2);
+  color: var(--primary-light);
+  border: 1px solid rgba(45, 125, 210, 0.3);
+}
+
+.tag-success {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: var(--success);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.tag-warning {
+  background-color: rgba(255, 193, 7, 0.2);
+  color: var(--warning);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.tag-danger {
+  background-color: rgba(239, 71, 111, 0.2);
+  color: var(--danger);
+  border: 1px solid rgba(239, 71, 111, 0.3);
+}
+
+/* Loading spinners */
+.loading-spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 4px solid rgba(45, 125, 210, 0.2);
+  border-radius: 50%;
+  border-top-color: var(--primary);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .health-card {
+    padding: 1rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 0.375rem 0.75rem;
+  }
+} 
